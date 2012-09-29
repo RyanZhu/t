@@ -1,0 +1,6 @@
+%div
+  %h1="This is Haml" 
+#uldiv
+  %ul
+    - @contacts.each do |c|
+      %li= raw c.name+link_to('Edit',edit_contact_path(c))

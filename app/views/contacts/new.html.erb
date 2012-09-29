@@ -1,0 +1,23 @@
+<%= form_for @contact do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="errorExplanation">
+      <h2> <% pluralize(@contact.errors.count,"error") %> prohibited this post from being saved: </h2>
+      <ul>
+        <% @contact.errors.full_messages.each do |msg|%>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+  <%=f.label :name %><br/>
+  <%=f.text_field :name%>
+  </p>
+  <p>
+  <p>
+  <%=f.label :phone%><br/>
+  <%=f.text_field :phone%>
+  </p>
+  <%=f.submit %>
+  </p>
+<% end %>

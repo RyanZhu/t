@@ -1,0 +1,11 @@
+= form_for @contact do |f|
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .field
+    = f.label :phone
+    %br/
+    = f.text_field :phone
+  .action
+    = f.submit
